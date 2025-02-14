@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Rotación de Personal - Tecolote</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a1a, #292929, #3d3d3d);
+            color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #222;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            border: 2px solid #ffcc00;
+            position: relative;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 250px;
+        }
+        .info-text {
+            font-size: 18px;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .separator {
+            width: 100%;
+            height: 2px;
+            background-color: #ffcc00;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-align: left;
+        }
+        input[type="text"], input[type="radio"], input[type="checkbox"] {
+            margin-top: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ffcc00;
+            border-radius: 5px;
+            background: #2a2a2a;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        .options label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #b8860b, #ffcc00, #ff5733);
+            color: #222;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #a87406, #e6c200, #ff4500);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="img/tecolote.jpg" alt="Logo de Tecolote" class="logo">
+        </div>
+        <div class="info-text">
+            <strong>ESTANDARIZACIÓN DE COMPROMISO LABORAL PARA EL BIENESTAR Y LA PRODUCTIVIDAD "TECOLOTE"</strong><br>
+            EL PRESENTE FORMULARIO TIENE COMO OBJETIVO RECOLECTAR INFORMACIÓN VALIOSA Y HONESTA DE TODOS LOS TRABAJADORES DEL RESTAURANTE TECOLOTE, CON EL FIN DE ENTENDER LAS CAUSAS SUBYACENTES DE LA ROTACIÓN DEL PERSONAL DENTRO DE LA EMPRESA. EL FORMULARIO ES CONFIDENCIAL Y LA INFORMACIÓN RECOPILADA ES UTILIZADA EXCLUSIVAMENTE PARA IDENTIFICAR LAS CAUSAS DE LA ROTACIÓN DEL PERSONAL EN EL RESTAURANTE.
+        </div>
+        <div class="separator"></div>
+        <h2>Formulario de Rotación de Personal</h2>
+        <form id="surveyForm">
+            <div class="question">
+                <label>1. ¿Por qué razón consideras que hay rotación del personal dentro del Restaurante?</label>
+                <div class="options">
+                    <label><input type="checkbox" name="rotacion" value="desinteres"> Por desinterés</label>
+                    <label><input type="checkbox" name="rotacion" value="mejor_oferta"> Mejor oferta de trabajo</label>
+                    <label><input type="checkbox" name="rotacion" value="jornada_laboral"> Por jornada laboral pesada</label>
+                    <label><input type="checkbox" name="rotacion" value="ambiente"> Ambiente laboral malo</label>
+                    <label><input type="checkbox" name="rotacion" value="capacitacion"> Falta de capacitación</label>
+                    <label><input type="checkbox" name="rotacion" value="ubicacion"> Por ubicación del restaurante</label>
+                    <label><input type="checkbox" name="rotacion" value="sueldo"> Sueldo</label>
+                    <label><input type="checkbox" name="rotacion" value="todas"> Todas las anteriores</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>2. ¿Cuánto tiempo llevas trabajando en la empresa?</label>
+                <div class="options">
+                    <label><input type="radio" name="tiempo" value="menos_3_meses"> Menos de 3 meses</label>
+                    <label><input type="radio" name="tiempo" value="mas_6_meses"> Más de 6 meses</label>
+                    <label><input type="radio" name="tiempo" value="mas_1_ano"> Más de 1 año</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>3. ¿Qué te gusta más de tu trabajo?</label>
+                <input type="text" name="gusta_mas" required>
+            </div>
+            <div class="question">
+                <label>4. ¿Qué te gusta menos de tu trabajo?</label>
+                <input type="text" name="gusta_menos" required>
+            </div>
+            <div class="question">
+                <label>5. ¿Te sientes valorado y reconocido en tu trabajo?</label>
+                <div class="options">
+                    <label><input type="radio" name="valorado" value="si"> Sí</label>
+                    <label><input type="radio" name="valorado" value="no"> No</label>
+                    <label><input type="radio" name="valorado" value="aveces"> A veces</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>6. ¿Te sientes cómodo con el horario de tu trabajo?</label>
+                <div class="options">
+                    <label><input type="radio" name="horario" value="pesada"> No, es muy pesada la jornada laboral</label>
+                    <label><input type="radio" name="horario" value="flexible"> Sí, los horarios son flexibles</label>
+                    <label><input type="radio" name="horario" value="sin_problema"> No tengo problema con mi horario de trabajo</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>7. ¿Conoces a alguien que haya dejado la empresa recientemente?</label>
+                <div class="options">
+                    <label><input type="radio" name="conoce_ex_empleado" value="si"> Sí</label>
+                    <label><input type="radio" name="conoce_ex_empleado" value="no"> No</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>8. ¿Has recibido capacitación o desarrollo personal para realizar tu trabajo de manera efectiva?</label>
+                <div class="options">
+                    <label><input type="radio" name="capacitacion" value="si"> Sí</label>
+                    <label><input type="radio" name="capacitacion" value="no"> No</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>9. ¿Por qué razón dejarías de trabajar en la empresa?</label>
+                <input type="text" name="razon_salida" required>
+            </div>
+            <div class="question">
+                <label>10. ¿Qué consideras que la empresa podría hacer para reducir la rotación del personal?</label>
+                <input type="text" name="reduccion_rotacion" required>
+            </div>
+            <div class="question">
+                <label>11. ¿Te sientes valorado y reconocido en tu trabajo?</label>
+                <div class="options">
+                    <label><input type="radio" name="valorado" value="si"> Sí</label>
+                    <label><input type="radio" name="valorado" value="no"> No</label>
+                    <label><input type="radio" name="valorado" value="aveces"> A veces</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>12. Consejo del empleado para el restaurante, con la finalidad de mejorar la rotación del personal</label>
+                <input type="text" name="consejo_empleado" required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("surveyForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Formulario enviado correctamente");
+            this.reset();
+        });
+    </script>
+</body>
+</html>
